@@ -10,9 +10,15 @@ FashionHub is a stylish and responsive fashion e-commerce website designed to sh
 1) Login page 
 2) Interactive logo
 3) Men, Women , Bags & footwear and many more things
-4) Search bar
-5) User-friendly shopping interface
-6) Add to cart functionality
+4) User-friendly shopping interface
+5) Add to cart functionality
+
+
+#Features that I will add
+1) Payment Process
+2) Sorting and filtering
+3) Wishlist
+
 
 #How to run the project
 1) clone the  repository to your local machine:
