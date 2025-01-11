@@ -4,8 +4,543 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* navigation bar */
+        nav{
+            background-color: rgb(218, 133, 147);
+            display: flex;
+            justify-content: space-evenly;
+            height: 40px;
+            gap: 30px;
+            margin: 0px;
+            padding: 5px; 
+            margin-top: 1px; 
+            
+        }
+        a{
+            display: flex;
+            align-items: center;
+            color: black;
+            font-size: 18px;
+        }
+        h1{
+            display: flex;
+            align-items: center;
+            color:white;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: cursive;
+        }
+       
+        .nav2{
+            background-color: rgb(255, 172, 185);
+        }
+        .nav2 a{
+            color: black;
+        }
+        .nav2 a:hover,
+        .nav1 a:hover{
+            color: white;
+        }
+
+        /* box  */
+        .container{
+            display: flex;
+            justify-content: center;
+            height: 400px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .outerbox{
+            width: 90%;
+            height: 40x;
+            border: 2px solid black;
+            display: flex;
+            gap:20px;
+            flex-wrap: wrap;
+        }
+
+        .innerbox1{
+            height: 150px;
+            width: 200px;
+            margin-left :700px; 
+             margin-top: -350px;
+            /* margin-top: 5px; */
+            border: 2px solid black;
+            /* display: flex;       */
+            /* align-items: center; */
+            
+        } 
+        .innerbox2{
+            height: 150px;
+            width: 200px;
+            border: 2px solid black;
+            /* margin-left: 550px;  */ 
+            margin-top:-350px ;
+        }
+        .innerbox3{
+            height: 150px;
+            width: 200px;
+            border: 2px solid black;
+            margin-left: 700px;
+            /* margin-top: 200px; */
+            /* margin-right: 0px; */
+            margin-top: -180px;
+
+        }
+        .innerbox4{
+            height: 150px;
+            width: 200px;
+            border: 2px solid black;
+            /* margin-left: 600px; */
+            margin-top: -180px;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            /* width: 100px; */
+            
+        }
+        .textstyle{
+            position: absolute;
+            color: black;
+        }
+        /* .alt{
+            color: black;
+        } */
+         /* h1{
+            color: black;
+         } */
+        .movebox{
+            height: 20px;
+            border: 2px solid black;
+            width: 100%;
+            display: flex; 
+            justify-content:baseline; 
+            margin-top: 374px;
+        }
+        button:hover{
+            background-color: black;
+        }
+
+        #search-bar{
+            width: 10px;
+        }
+
+         /* movingtext */
+         .moving-text {
+            font-size: 40px;
+            font-weight: bold;
+            position: relative;
+            animation: moveText1 2s linear infinite;
+            color: black;
+        }
+
+        @keyframes moveText1 {
+            0% {
+                left: -8%;
+            }
+            100% {
+                left: 5%;
+            }
+
+        }
+        .moving-box {
+            font-size:20px;
+            font-weight: bold;
+            position: relative;
+            animation: moveText2 1s linear infinite;
+            color: black;
+            
+            
+        }
+
+        @keyframes moveText2 {
+            0% {
+                left: -0.4%;
+            }
+            100% {
+                left: 5%;
+            }
+        }
+        .movebox{
+            background-color: rgba(238, 222, 243, 0.753);
+            margin-top: 0px;
+        }
+        .outerbox{
+            background-color: aquamarine;
+        }
+
+        /* banner design */
+        body {
+             margin: 0;
+             font-family: Arial, sans-serif;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 1620px;
+            height: 100%;
+            overflow: hidden; 
+            margin: auto;
+        } 
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } 
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.controls span {
+    cursor: pointer;
+    font-size: 40px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.controls span:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+} 
+
+
+    /* oval-box */
+    .oval-box{
+        
+        border: 2px solid black;
+        display: flex;
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* flex-wrap: wrap; */
+        height: 200px;
+        width: 200px;
+        margin: 10px;
+        /* margin-top: 500px; */
+        gap: 10px;
+        border-radius: 50%;
+    }
+    .container-2{
+            display: flex;
+            /* justify-content: center; */
+            /* height: 400px; */
+            padding: 10px;
+            margin-top: 20px;
+            margin-left: 4%;
+            gap: 40px;
+        }
+        .image{
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        /* footer */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .myntra-footer {
+            background-color: #f7f7f7;
+            color: #696b79;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-section {
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+        .footer-section h5 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #696b79;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.app-links a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.app-links img {
+    height: 40px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        margin: 20px 0;
+    }
+}
+.textstyle{
+    font-weight: bold;
+   
+}
+h2{
+    margin: 150px;
+
+}
+button{
+    height: 60px;
+    width: 100px;
+    border-radius: 15%;
+    margin-top: 150px;
+   margin-left: -100px;
+}
+button:hover{
+    color: pink;
+    background-color: palevioletred;
+}
+h1{
+    font-size: larger;
+}
+
+        
+        
+
+    </style>
 </head>
 <body>
-    
+    <!-- navigation bar -->
+    <nav class="nav1">
+        <h1>Tunic</h1>
+        <div class="moving-text">
+            Shop What You Love, Love What You Get.        </div>
+        <a href="login.html">Login</a>
+    </nav>
+
+    <nav class="nav2">
+        <a href="index.html">Home</a>
+        <a href="fashion.html">Fashion</a>
+        <!-- <a class="searchbar">
+            <input type="text" placeholder="Searh for brands, cloths and many more" id="searchbar">
+        </a> -->
+        <a href="kitchen.html">Home & Kitchen</a>
+        <a href="bags.html">Bags & Footwear</a>
+        <a class="search-bar">
+            <input type="text" placeholder="Searh for brands, cloths and many more" id="searchbar">
+        </a> 
+        <a href="wishlist.html">Wishlist</a>
+    </nav>
+
+    <!-- box layout -->
+     <div class="container">
+        <div class="outerbox">
+        <h2>Get your favourites at <br>affordable range!!!</h2>
+        <button>Shop Now</button>    
+        <!-- <div class="bannerimg">
+                <img  src="https://cdn.printnetwork.com/production/assets/5966561450122033bd4456f8/imageLocker/blog-description/blog/sales_banners.jpg" alt="">
+            </div> -->
+       <!-- <div class="carousel">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="https://rukminim2.flixcart.com/fk-p-flap/1620/270/image/327e2f5c78d2380e.jpg?q=20" alt="Banner 1">
+                    </div>
+                    <div class="slide">
+                        <img src="https://rukminim2.flixcart.com/fk-p-flap/1620/270/image/2d3f671c21c88a9b.jpg?q=20" alt="Banner 2">
+                    </div>
+                    <div class="slide">
+                        <img src="https://rukminim2.flixcart.com/fk-p-flap/1620/270/image/60f6d68ed16b68d5.jpg?q=20" alt="Banner 3">
+                    </div>
+                </div>
+                <div class="controls">
+                    <span class="prev">&#10094;</span>
+                    <span class="next">&#10095;</span>
+                </div>
+            </div>    
+            
+        </div> -->
+        <!-- banner design -->
+       
+            
+            <!-- <h6>box1</h6> -->
+            <div class="innerbox1">
+                <img src="https://m.media-amazon.com/images/I/81-fOt1nLDL._AC_UY350_.jpg" alt=" Western dress">
+                 <div class="textstyle">Western Dresses</div> 
+            </div>
+            <div class="innerbox2">
+                <img src="https://i.etsystatic.com/23998705/r/il/13b734/5697220747/il_1080xN.5697220747_py43.jpg" alt="">
+                <div class="textstyle">Formals</div> 
+            </div>
+
+            <div class="innerbox3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsKvFClgateQPsxymFlRGpSuZRffHHNKY5Rg&s" alt="">
+                <div class="textstyle">Furniture</div> 
+            </div>
+            <div class="innerbox4">
+                <img src="https://m.media-amazon.com/images/I/71MQo8pHmBL.jpg" alt=""> 
+                <div class="textstyle">Beauty & Makeup</div>             
+            </div>
+            <div class="movebox">
+                <div class="moving-box">GET UPTO 50% OFF ON YOUR FIRST ORDER!!!  </div>
+                <div class="moving-box">GET UPTO 50% OFF ON YOUR FIRST ORDER!!! </div>
+                <div class="moving-box">GET UPTO 50% OFF ON </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <!-- next box -->
+         <div class="container-2">
+            <div class="oval-box">
+               <img  class="image"src="https://media.istockphoto.com/id/925960984/photo/air-kiss-for-you-close-up-cropped-shot-of-femenine-gorgeous-charming-adorable-lady-with.jpg?s=612x612&w=0&k=20&c=DkujblO2wtYX-JGRQPTEsU9s-LmNWW5h_vx-StTQW4E=" alt="Lipstick">
+            </div>
+            <div class="oval-box">
+                <img class="image"src="https://m.media-amazon.com/images/I/71bKbLhHHWL.jpg" alt="Eyeshadow" >
+            </div>
+            <div class="oval-box">
+                <img class="image" src="https://images-static.nykaa.com/media/catalog/product/9/8/98dd9746902395234708_2.jpg?tr=w-500" alt="">
+            </div>
+            <div class="oval-box">
+                <img class="image"src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000000494284166/TzkQpP4WUT-000000000494284166_1.jpg" alt="">
+            </div>
+            <div class="oval-box">
+                <img  class="image"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSArEfp5-AeC4CdTOtttonZ6GVG2WzYPGc2Eg&s" alt="">
+            </div>
+         </div>
+
+         <!-- footer -->
+          
+          <footer class="myntra-footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h5>ONLINE SHOPPING</h5>
+                    <ul>
+                        <li><a href="men.html">Men</a></li>
+                        <li><a href="women.html">Women</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                        <li><a href="kitchen.html">Home & Living</a></li>
+                        <li><a href="beauty.html">Beauty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>CUSTOMER POLICIES</h5>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">T&C</a></li>
+                        <li><a href="#">Terms Of Use</a></li>
+                        <li><a href="#">Track Orders</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Cancellation</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Grievance Officer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>USEFUL LINKS</h5>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>EXPERIENCE MYNTRA APP ON MOBILE</h5>
+                    <div class="app-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.myntra.android"><img src="data:image/png;base64,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" alt="Google Play Store"></a>
+                        <a href="https://apps.apple.com/in/app/myntra-fashion-shopping-app/id907394059"><img src="data:image/png;base64,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" alt="Apple App Store"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Myntra. All rights reserved.</p>
+            </div>
+        </footer>
+        
+
 </body>
+<script>
+    const slides = document.querySelector('.slides');
+const slideImages = document.querySelectorAll('.slide');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+let index = 0;
+
+// Function to show the next slide
+function showNextSlide() {
+    index++;
+    if (index >= slideImages.length) {
+        index = 0;
+    }
+    updateSlidePosition();
+}
+
+// Function to show the previous slide
+function showPrevSlide() {
+    index--;
+    if (index < 0) {
+        index = slideImages.length - 1;
+    }
+    updateSlidePosition();
+}
+
+// Function to update the slide position
+function updateSlidePosition() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// Add event listeners for next and previous buttons
+next.addEventListener('click', showNextSlide);
+prev.addEventListener('click', showPrevSlide);
+
+// Auto-slide every 5 seconds
+setInterval(showNextSlide, 5000);
+
+
+</script>
 </html>
