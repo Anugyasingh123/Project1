@@ -16,7 +16,7 @@ FashionHub is a stylish and responsive fashion e-commerce website designed to sh
 
 #Features that I will add
 1) Payment Process
-2) Sorting and filtering
+2) 2) Sorting and filtering
 3) Wishlist
 
 
