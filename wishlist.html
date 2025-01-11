@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wishlist-container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    li {
+        background-color: #e4e4e4;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    button {
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    input {
+        padding: 5px;
+        margin-right: 10px;
+    }
+</style>
+    
+</head>
+<body>
+    <div class="wishlist-container">
+        <h1>Your Wishlist</h1>
+        <ul id="wishlist-items"></ul>
+        <div>
+            <label for="item">Add Item:</label>
+            <input type="text" id="item" placeholder="Enter item name">
+            <button onclick="addItem()">Add to Wishlist</button>
+        </div>
+    </div>
+
+</body>
+<script>
+    function addItem() {
+    const itemInput = document.getElementById('item');
+    const itemText = itemInput.value.trim();
+    
+    if (itemText === '') {
+        alert('Please enter an item.');
+        return;
+    }
+    
+    const ul = document.getElementById('wishlist-items');
+    const li = document.createElement('li');
+    li.textContent = itemText;
+    
+    // Create a remove button for each item
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Remove';
+    removeBtn.onclick = function() {
+        ul.removeChild(li);
+    };
+    
+    li.appendChild(removeBtn);
+    ul.appendChild(li);
+    
+    itemInput.value = ''; // Clear the input field
+}
+
+</script>
+</html>

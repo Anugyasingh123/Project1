@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+        header {background-color: #ff4081;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .products {
+            padding: 20px;
+        }
+        .product-list {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .product {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #e91e63;
+        }
+        .cart {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart">
+        <ul id="cart-items"></ul>
+        <p>Total: ₹<span id="total-price">0</span></p>
+        <button onclick="clearCart()">Clear Cart</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Women's Clothing Store. All rights reserved.</p>
+    </footer>
+
+ 
+</body>
+<script>
+    // Store cart data in localStorage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Function to add items to the cart
+function addToCart(itemName, price) {
+    cart.push({ name: itemName, price: price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${itemName} has been added to your cart.`);
+}
+
+// Function to load the cart items on the cart.html page
+function loadCart() {
+    const cartItems = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+    let totalPrice = 0;
+
+    cartItems.innerHTML = ''; // Clear the list before populating
+
+    cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - ₹${item.price}`;
+        cartItems.appendChild(li);
+        totalPrice += item.price;
+    });
+
+    totalPriceElement.textContent = totalPrice;
+}
+
+// Function to clear the cart
+function clearCart() {
+    cart = [];
+    localStorage.removeItem('cart');
+    alert('Cart has been cleared.');
+    loadCart();
+}
+
+// Load the cart on the cart page
+if (document.getElementById('cart-items')) {
+    loadCart();
+}
+
+</script>
+</html>
