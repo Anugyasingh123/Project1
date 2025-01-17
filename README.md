@@ -1,4 +1,4 @@
-✨ **Project**
+✨# **Project**
 # **Overview**
 The sample website that our teacher gave me was Myntra.
 I have tried to make an e-commerce website using the knowledge that I got from Masai.
@@ -6,7 +6,7 @@ My website name is Tunic.
 I have also referred help from chat GPT.
 FashionHub is a stylish and responsive fashion e-commerce website designed to showcase the latest trends in clothing, footwear, and accessories. It provides users with an interactive and seamless shopping experience, similar to popular platforms like Myntra.
 
-🚀 **Features**
+🚀 #**Features**
 ✔️ Login page 
 ✔️ Interactive logo
 ✔️ Men, Women, Bags & footwear and many more things
