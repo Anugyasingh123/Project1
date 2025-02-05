@@ -21,7 +21,7 @@ FashionHub is a stylish and responsive fashion e-commerce website designed to sh
 
 
 # **Screenshot of my website**
-![screenshot of website](![image](![image](https://github.com/user-attachments/assets/79b2eb29-415e-4f18-a42a-b2a59ec394d8)
+![screenshot of website](![image](![image](https://github.com/user-attachments/assets/79b2eb29-415e-4f18-a42a-b2a59ec394d8.png)
 )
 )
 
