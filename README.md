@@ -20,11 +20,6 @@ FashionHub is a stylish and responsive fashion e-commerce website designed to sh
 3) Wishlist<br/>
 
 
-# **Screenshot of my website**
-![screenshot of website](![image](![image](https://github.com/user-attachments/assets/79b2eb29-415e-4f18-a42a-b2a59ec394d8.png)
-)
-)
-
 # **How to run the project**
 1) clone the repository to your local machine by using `git clone`:
    git clone https://github.com/Anugyasingh123/Project1.git
